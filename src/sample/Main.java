@@ -15,13 +15,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        primaryStage.setResizable(false);
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Movix");
-        button1 = new Button();
-        button1.setText("Login");
-        StackPane layout = new StackPane();
-        layout.getChildren().add(button1);
-        Scene scene = new Scene(layout, 300, 250 );
+        Scene scene = new Scene(root, 1280, 720 );
         primaryStage.setScene(scene);
         primaryStage.show();
 
